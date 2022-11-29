@@ -18,7 +18,7 @@ ENV PORT=3000
 #start the app
 CMD ["npm", "start"]
 
-FROM development AS dev-envs
+FROM development
 RUN <<EOF
 apt-get update
 apt-get install -y git
