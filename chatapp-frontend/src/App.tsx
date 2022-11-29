@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
-import Chat from './components/Chat';
-import {ChannelListContainer, ChannelContainer} from './components';
+import React from 'react';
+import Chat from './components/Chat/Chat';
+import {FriendListContainer, ChannelContainer, CompanyHeader} from './components';
 
 
 type AppProps = {
@@ -9,17 +9,17 @@ type AppProps = {
 
 
 //annotate the return type so an error is raised if you accidentally return some other type
-const App:FC<AppProps> = (props) => {
+const App = (props: AppProps) => {
 
     return (
         <div className="app-wrapper">
             
-                <Chat>
-                    <ChannelListContainer />
-                    
-                    <ChannelContainer />
-                </Chat>
-            <h1>{props.appName}</h1>
+            <CompanyHeader companyName='Chat App'/>
+            <Chat>
+                <FriendListContainer />
+                
+                <ChannelContainer />
+            </Chat>
         </div>
     );
 }

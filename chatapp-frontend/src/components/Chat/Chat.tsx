@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 
 export interface ChatProps {
     children: React.ReactNode | React.ReactNode[]
