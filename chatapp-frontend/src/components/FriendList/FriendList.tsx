@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Box from '@mui/material/Box';
+
 
 export interface FriendListProps {
     children?: React.ReactNode | React.ReactNode[];
@@ -15,36 +17,36 @@ const FriendList = ({children, error = false, loading, type, filters}: FriendLis
     if(error)
     {
         return type === 'team' ? (
-            <div className="team-friend-list">
+            <Box className="team-friend-list">
                 <p className="team-friend-list-message">
                     Error, please try again.
                 </p>
 
-            </div>
+            </Box>
         ) : null
     }
 
     if(loading){
         return (
-            <div className="team-friend-list">
+            <Box className="team-friend-list">
                 <p className="team-friend-list-message-loading">
                     {type === 'team' ? 'Friends' : 'Messages'} loading...
                 </p>
 
-            </div>
+            </Box>
         );
     }
 
     return (
-        <div className="team-friend-list">
-            <div className="team-friend-list-header">
+        <Box className="team-friend-list">
+            <Box className="team-friend-list-header">
                 <p className="team-friend-list-header-title">
                 {type === 'team' ? 'Friends' : 'Direct Messages'}
                 </p>
                 {/*TODO: add button*/}
-            </div>
+            </Box>
             {children}
-        </div>
+        </Box>
     );
 }
 

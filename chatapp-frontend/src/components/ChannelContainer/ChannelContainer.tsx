@@ -1,10 +1,11 @@
 import React from 'react';
+import Grid from '@mui/material/Grid';
 
 const ChannelContainer = () => {
     return (
-        <div>
+        <Grid item xs={10}>
             ChannelContainer
-        </div>
+        </Grid>
     );
 }
 

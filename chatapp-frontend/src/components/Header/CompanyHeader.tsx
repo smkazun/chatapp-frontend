@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from '@mui/material/Box';
 
 type CompanyHeaderProps = {
     companyName?: string
@@ -6,9 +7,9 @@ type CompanyHeaderProps = {
 
 const CompanyHeader = (props: CompanyHeaderProps) => {
     return (
-        <div className="friend-list-header">
+        <Box className="friend-list-header">
             <h1>{props.companyName}</h1>
-        </div>
+        </Box>
     );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Chat from './components/Chat/Chat';
 import {FriendListContainer, ChannelContainer, CompanyHeader} from './components';
+import Grid from '@mui/material/Grid';
 
 
 type AppProps = {
@@ -12,7 +13,7 @@ type AppProps = {
 const App = (props: AppProps) => {
 
     return (
-        <div className="app-wrapper">
+        <Grid className="app-wrapper">
             
             <CompanyHeader companyName='Chat App'/>
             <Chat>
@@ -20,7 +21,7 @@ const App = (props: AppProps) => {
                 
                 <ChannelContainer />
             </Chat>
-        </div>
+        </Grid>
     );
 }
 

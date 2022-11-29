@@ -1,4 +1,5 @@
 import React from 'react';
+import {Grid} from '@mui/material';
 
 export interface ChatProps {
     children: React.ReactNode | React.ReactNode[]
@@ -6,9 +7,9 @@ export interface ChatProps {
 
 const Chat = ({children}: ChatProps) => {
     return (
-        <div>
+        <Grid container>
             {children}
-        </div>
+        </Grid>
     );
 }
 

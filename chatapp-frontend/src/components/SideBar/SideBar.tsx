@@ -1,4 +1,5 @@
 import React from 'react';
+import {Box, Grid} from '@mui/material';
 
 export interface SideBarProps {
     children?: React.ReactNode | React.ReactNode[]
@@ -6,13 +7,21 @@ export interface SideBarProps {
 
 const SideBar = (props: SideBarProps) => {
     return (
-        <div className="friend-list-sidebar">
-            <div className="friend-list-sidebar-icon1">
-                <div className="icon1-inner">
+        <Grid item xs={4} className="friend-list-sidebar">
+            <Box className="friend-list-sidebar-icon1">
+                <Box className="icon1-inner">
                     <img src={"LogoIcon"} alt="Logo" width="30" />
-                </div> 
-            </div> 
-        </div> 
+                </Box> 
+            </Box> 
+            <Box className="friend-list-sidebar-icon2">
+                <Box className="icon2-inner">
+                    <img src={"LogoIcon"} alt="Second" width="30" />
+                </Box> 
+            </Box>
+
+
+            {/*TODO: add more sidebar options*/}
+        </Grid> 
     );
 }
 

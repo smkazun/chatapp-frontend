@@ -1,4 +1,5 @@
 import React, {useState, useEffect, SyntheticEvent} from 'react';
+import {Box, Grid} from '@mui/material';
 //import chat context
 //import {SearchIcon} from '../assets';
 
@@ -32,14 +33,14 @@ const FriendSearch = () => {
 
 
     return(
-        <div className="friend-search-container">
-            <div className="friend-search-input-wrapper">
-                <div className="friend-search-input-icon">
+        <Box className="friend-search-container">
+            <Grid container className="friend-search-input-wrapper">
+                <Grid item xs={2} className="friend-search-input-icon">
                     {/**<SearchIcon /> */}
-
+                    
 
                     
-                </div>
+                </Grid>
                 <input
                     className="friend-search-input-text"
                     placeholder="Search"
@@ -47,8 +48,8 @@ const FriendSearch = () => {
                     value={query}
                     onChange={onSearch}
                 />
-            </div> 
-        </div> 
+            </Grid> 
+        </Box> 
     );
 }
 
