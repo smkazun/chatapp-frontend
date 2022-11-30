@@ -7,15 +7,15 @@ export interface SideBarProps {
 
 const SideBar = (props: SideBarProps) => {
     return (
-        <Grid item xs={4} className="friend-list-sidebar">
+        <Grid item xs={2} className="friend-list-sidebar">
             <Box className="friend-list-sidebar-icon1">
                 <Box className="icon1-inner">
-                    <img src={"LogoIcon"} alt="Logo" width="30" />
+                    <img src={"LogoIcon"} alt="Messages" width="30" />
                 </Box> 
             </Box> 
             <Box className="friend-list-sidebar-icon2">
                 <Box className="icon2-inner">
-                    <img src={"LogoIcon"} alt="Second" width="30" />
+                    <img src={"LogoIcon"} alt="Groups" width="30" />
                 </Box> 
             </Box>
 

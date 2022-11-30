@@ -9,14 +9,13 @@ import {Box, Grid} from '@mui/material';
 
 const FriendListContainer = () => {
     return (
-        <Grid item xs={2}>
+        <Grid item xs={4}>
             <Grid container>
                 <SideBar />
                 <Box className="friend-list-list-wrapper">
                     <FriendSearch />
                     <FriendList 
                         filters={{}}
-                        type='team'
                     />
                 </Box>
             </Grid>

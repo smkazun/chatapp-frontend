@@ -13,7 +13,7 @@ type AppProps = {
 const App = (props: AppProps) => {
 
     return (
-        <Grid className="app-wrapper">
+        <Grid container className="app-wrapper">
             
             <CompanyHeader companyName='Chat App'/>
             <Chat>
