@@ -1,28 +1,9 @@
 //https://www.sohamkamani.com/typescript/rest-http-api-call/
 //https://bobbyhadz.com/blog/typescript-http-request-axios
 import axios from 'axios';
-import { resourceLimits } from 'worker_threads';
+import {FriendListPreview, Friend, Message} from '../types/types';
 
 const basePath = 'chatApp';
-
-type Friend = {
-    userId: number,
-    firstName: string,
-    lastName?: string, //TODO:
-}
-
-type Message = {
-    text: string,
-    dateReceived?: Date //TODO:
-}
-
-
-type FriendListPreview = {
-    userId: number,
-    firstName: string,
-    lastName?: string, //TODO:
-    message: string
-}
 
 
 //returns all friends with most recent message in preview

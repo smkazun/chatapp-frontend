@@ -1,20 +1,10 @@
 //https://mswjs.io/docs/getting-started
 import {rest} from 'msw';
+import {FriendListPreview, Friend, Message} from '../types/types';
 
 const basePath = 'chatApp'; //TODO:
 
 
-//TODO: move
-type Friend = {
-    userId: number,
-    firstName: string,
-    lastName?: string, //TODO:
-}
-
-type Message = {
-    text: string,
-    dateReceived?: Date //TODO:
-}
 
 //Move to dummy data folder/files
 const friendMap = new Map<number, Friend[]>([
@@ -99,32 +89,31 @@ const messageMap = new Map<number, Message>([
 ]);
 
 
-type FriendListPreview = {
-    userId: number,
-    firstName: string,
-    lastName?: string, //TODO:
-    message?: string
-}
-
 const friendListPreviewMap = new Map<number, FriendListPreview[]>([
     [1, 
         [{
             userId: 2,
             firstName: 'NotSeb',
             lastName: 'NotReal',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         },
         {
             userId: 3,
             firstName: 'Logan',
             lastName: 'Real',
-            message: 'BAHHHHHHHHHHHH'
+            message: {
+                text: 'BAHHHHHHHHHHHH'
+            }
         },
         {
             userId: 4,
             firstName: 'Dom',
             lastName: 'ReallyReal',
-            message: 'Hey are you going to Scarabough fair tomorrow morning at 7:87pm or not???'
+            message: {
+                text: 'Hey are you going to Scarabough fair tomorrow morning at 7:87pm or not???'
+            }
         }]
     ],
     [2, 
@@ -132,13 +121,17 @@ const friendListPreviewMap = new Map<number, FriendListPreview[]>([
             userId: 1,
             firstName: 'Seb',
             lastName: 'Real',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         },
         {
             userId: 3,
             firstName: 'Logan',
             lastName: 'AlsoNotReal',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         }]
     ],
     [3, 
@@ -146,13 +139,17 @@ const friendListPreviewMap = new Map<number, FriendListPreview[]>([
             userId: 1,
             firstName: 'Seb',
             lastName: 'Real',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         },
         {
             userId: 2,
             firstName: 'NotSeb',
             lastName: 'NotReal',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         }]
     ],
     [4, 
@@ -160,7 +157,9 @@ const friendListPreviewMap = new Map<number, FriendListPreview[]>([
             userId: 1,
             firstName: 'Seb',
             lastName: 'Real',
-            message: 'Im awesome youre awesome'
+            message: {
+                text: 'Im awesome youre awesome'
+            }
         }]
     ],
     [5, []]
