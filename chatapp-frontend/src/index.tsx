@@ -1,6 +1,11 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
-ReactDom.render(<App />, document.getElementById('root'));
+if(process.env.NODE_ENV === 'development'){
+    const {worker} = require('./mocks/browser');
+    worker.start();
+}
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
