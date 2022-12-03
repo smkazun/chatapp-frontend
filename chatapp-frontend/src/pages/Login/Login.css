@@ -1,0 +1,21 @@
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+
+    border-style: solid; 
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*TODO*/
+.logo{
+    text-align: center; 
+}

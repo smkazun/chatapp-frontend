@@ -1,5 +1,11 @@
 import React, {ChangeEvent, FormEvent, FormEventHandler, useState} from 'react';
 import {LoginFormValues} from '../../types/types';
+import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Button from 'react-bootstrap/Button';
+import Stack from 'react-bootstrap/Stack';
+import FormLabel from 'react-bootstrap/FormLabel';
+import './Login.css';
 
 
 const Login = () => {
@@ -45,28 +51,40 @@ const Login = () => {
 
     //TODO:
     return (
-        <div>
-            LoginPage
-            <form onSubmit={handleSubmit}>
 
-                <input 
-                    type='text' 
-                    name='username' 
-                    placeholder='username'
-                    onChange={onEmailInputChange}/>
+        <div className="wrapper">
+            <div className="loginContainer">
+                <Form>
+                    <Stack gap={1} col-md-5 mx-auto>
+                    `   
+                            <Form.Label className="logo"> LOGO HERE</Form.Label>
+                        
 
-                <input 
-                    type='text' 
-                    name='password' 
-                    placeholder='password'
-                    onChange={onPasswordInputChange}/>
-
-                <input 
-                    type='submit' 
-                    value="Login" 
-                    />
-            </form>
-
+                        <Form.Group className="mb-3" controlId="formEmail">
+                            <FloatingLabel 
+                                controlId="floatingEmail"
+                                label="Email address"
+                            >
+                                
+                                <Form.Control type="email" placeholder="Email address"/>
+                            </FloatingLabel>
+                        </Form.Group>
+                        
+                        <Form.Group className="mb-3" controlId="formPassword">
+                            <FloatingLabel 
+                                controlId="floatingPassword"
+                                label="Password"
+                            >
+                                <Form.Control type="password" placeholder="Password"/> 
+                            </FloatingLabel>  
+                        </Form.Group>
+                            
+                        <Button variant="primary" type="submit">Submit</Button>  
+                    
+                    </Stack>
+                </Form>
+                
+            </div>
         </div>
     );
 }

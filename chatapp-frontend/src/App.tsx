@@ -8,19 +8,6 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Login</Link>
-                        </li>
-                        <li>
-                            <Link to="/home">Home</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="home" element={<Home />} />
