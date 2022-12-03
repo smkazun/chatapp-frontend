@@ -1,3 +1,9 @@
+export type LoginFormValues = {
+    username: string,
+    password: string
+}
+
+
 export type Friend = {
     userId: number,
     firstName: string,
