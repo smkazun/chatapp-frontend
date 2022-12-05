@@ -4,11 +4,11 @@ import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
-import FormLabel from 'react-bootstrap/FormLabel';
-import './Login.css';
+import './LoginForm.css';
+import { Link } from 'react-router-dom';
 
 
-const Login = () => {
+const LoginForm = ({onFormChange} : any) => {
 
     const [formValues, setFormValues] = useState<LoginFormValues>({username: '', password: ''});
 
@@ -49,17 +49,13 @@ const Login = () => {
     //FormEvents  END---------------------------------------------------------------
 
 
-    //TODO:
+    //TODO: rewrite so loginContainer can be switched out for register form
     return (
-
-        <div className="wrapper">
-            <div className="loginContainer">
+            <div className="loginContainer" >
                 <Form>
-                    <Stack gap={1} col-md-5 mx-auto>
-                    `   
-                            <Form.Label className="logo"> LOGO HERE</Form.Label>
+                    <Stack gap={1} col-md-5 mx-auto>   
+                        <Form.Label className="logo"> LOGO HERE</Form.Label>
                         
-
                         <Form.Group className="mb-3" controlId="formEmail">
                             <FloatingLabel 
                                 controlId="floatingEmail"
@@ -79,14 +75,16 @@ const Login = () => {
                             </FloatingLabel>  
                         </Form.Group>
                             
-                        <Button variant="primary" type="submit">Submit</Button>  
-                    
+                        <Button variant="primary" type="submit">Login</Button> 
+                        
+                        <Form.Text className="text-muted">
+                            Already have an account? <Link to='#' onClick={() => onFormChange('register')}>Register</Link>
+                        </Form.Text> 
                     </Stack>
                 </Form>
                 
             </div>
-        </div>
     );
 }
 
-export default Login;
+export default LoginForm;

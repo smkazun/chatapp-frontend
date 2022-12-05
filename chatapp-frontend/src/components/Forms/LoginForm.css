@@ -1,0 +1,13 @@
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+
+    border-style: solid; 
+}
+
+/*TODO*/
+.logo{
+    text-align: center; 
+}
